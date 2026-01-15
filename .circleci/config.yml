@@ -3,7 +3,7 @@ jobs:
     trial:
       docker:
             - image: cnkajgqe2/az1
-      parallelism: 1
+      parallelism: 10
       steps:
         - run:
             name: Install Dependencies
